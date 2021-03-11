@@ -1,22 +1,33 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>My Movie Search</ion-title>
-  </ion-toolbar>
-</ion-header>
+
  
 <ion-content>
- 
-  <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="searchChanged($event)"></ion-searchbar>
- 
-  <ion-item>
-    <ion-label>Select Searchtype</ion-label>
-    <ion-select [(ngModel)]="type" (ionChange)="searchChanged($event)">
-      <ion-select-option value="">All</ion-select-option>
-      <ion-select-option value="movie">Movie</ion-select-option>
-      <ion-select-option value="series">Series</ion-select-option>
-      <ion-select-option value="episode">Episode</ion-select-option>
-    </ion-select>
-  </ion-item>
+
+  <div class="heading">
+
+    <ion-card  class="card2">
+      
+      <img class="img" src="assets\movie.png">
+      </ion-card>
+  
+  <ion-card class="card1">
+      <h1 style="color: white ; position: relative;left: 25%;align-items: center;font-weight: bold;">My Movie Search</h1>
+      <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="searchChanged($event)"></ion-searchbar>
+      <ion-item style="color:red ;">
+        <ion-label style="color: #edc02c ;" >Select Searchtype</ion-label>
+        <ion-select [(ngModel)]="type" (ionChange)="searchChanged($event)">
+          <ion-select-option value="">All</ion-select-option>
+          <ion-select-option value="movie">Movie</ion-select-option>
+          <ion-select-option value="series">Series</ion-select-option>
+          <ion-select-option value="episode">Episode</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card> 
+    
+    
+  </div>
+  
+  
+  
  
   <ion-list>
  
